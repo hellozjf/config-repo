@@ -20,3 +20,6 @@
 # ribbon:
 #   ReadTimeout: 60000
 #   ConnectTimeout: 60000
+girl:
+  name: lili
+  age: 18
