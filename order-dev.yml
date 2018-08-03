@@ -8,10 +8,14 @@ spring:
     password: Zjf@1234
     driver-class-name: com.mysql.jdbc.Driver
   rabbitmq:
-    host: aliyun.hellozjf.com
+#     host: aliyun.hellozjf.com
+#     port: 5672
+#     username: hellozjf
+#     password: Zjf@1234
+    host: localhost
     port: 5672
-    username: hellozjf
-    password: Zjf@1234
+    username: guest
+    password: guest
 logging:
   level:
     com.imooc.order: debug
