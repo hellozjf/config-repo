@@ -19,9 +19,12 @@ spring:
   cloud:
     stream:
       bindings:
-        myMessage:
-          group: order
-          content-type: application/json
+        input:
+          group: test-group
+          destination: test-exchange
+        output:
+          group: test-group
+          destination: test-exchange
 logging:
   level:
     com.imooc.order: debug
@@ -34,7 +37,3 @@ env: dev
 girl:
   name: lili
   age: 38
-spring.cloud.stream.bindings.input.destination: test-stream
-spring.cloud.stream.bindings.input.group: test-group
-spring.cloud.stream.bindings.output.destination: test-stream
-spring.cloud.stream.bindings.output.group: test-group
