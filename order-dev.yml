@@ -25,10 +25,10 @@ spring:
         output:
           group: group
           destination: exchange
-        input:
+        input2:
           group: group2
           destination: exchange2
-        output:
+        output2:
           group: group2
           destination: exchange2
 logging:
