@@ -21,16 +21,12 @@ spring:
       bindings:
         input:
           destination: exchange
-          group: group
         output:
           destination: exchange
-          group: group
         input2:
           destination: exchange2
-          group: group2
         output2:
           destination: exchange2
-          group: group2
         productInfoInput:
           destination: productInfo
 logging:
