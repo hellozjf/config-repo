@@ -7,6 +7,9 @@ spring:
     username: root
     password: Zjf@1234
     driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: aliyun.hellozjf.com
+    port: 6379
   rabbitmq:
     host: aliyun.hellozjf.com
     port: 5672
