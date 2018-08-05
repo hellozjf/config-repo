@@ -20,17 +20,19 @@ spring:
     stream:
       bindings:
         input:
-          group: group
           destination: exchange
+          group: group
         output:
-          group: group
           destination: exchange
+          group: group
         input2:
-          group: group2
           destination: exchange2
+          group: group2
         output2:
-          group: group2
           destination: exchange2
+          group: group2
+        productInfoInput:
+          destination: productInfo
 logging:
   level:
     com.imooc.order: debug

@@ -15,7 +15,7 @@ spring:
   cloud:
     stream:
       bindings:
-        output:
+        productInfoOutput:
           destination: productInfo
   jpa:
     show-sql: true
