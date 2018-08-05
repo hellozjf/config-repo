@@ -7,6 +7,16 @@ spring:
     username: root
     password: Zjf@1234
     driver-class-name: com.mysql.jdbc.Driver
+  rabbitmq:
+    host: aliyun.hellozjf.com
+    port: 5672
+    username: hellozjf
+    password: Zjf@1234  
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: productInfo
   jpa:
     show-sql: true
 logging:
