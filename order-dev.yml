@@ -34,3 +34,5 @@ env: dev
 girl:
   name: lili
   age: 38
+spring.cloud.stream.bindings.input.destination: test-stream
+spring.cloud.stream.bindings.output.destination: test-stream
