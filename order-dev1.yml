@@ -20,11 +20,17 @@ spring:
     stream:
       bindings:
         input:
-          group: test-group
-          destination: test-exchange
+          group: group
+          destination: exchange
         output:
-          group: test-group
-          destination: test-exchange
+          group: group
+          destination: exchange
+        input:
+          group: group2
+          destination: exchange2
+        output:
+          group: group2
+          destination: exchange2
 logging:
   level:
     com.imooc.order: debug
