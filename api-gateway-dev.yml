@@ -22,3 +22,20 @@ hystrix:
 ribbon:
   ConnectTimeout: 60000
   ReadTimeout: 60000
+zuul:
+  routes:
+    # /myProduct/product/list -> /product/product/list
+    myProduct:
+      path: /myProduct/**
+      serviceId: product
+      sensitiveHeaders:
+    # 简洁写法
+#    product: /myProduct/**
+  # 排除某些路由
+  ignored-patterns:
+    - /**/product/listForOrder
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
