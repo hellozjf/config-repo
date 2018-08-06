@@ -18,6 +18,7 @@ zuul:
       sensitiveHeaders:
     # 简洁写法
     order: /myOrder/**
+    config: /helloConfig/**
   # 排除某些路由
   ignored-patterns:
     - /**/product/listForOrder
