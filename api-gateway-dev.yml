@@ -17,7 +17,7 @@ zuul:
       serviceId: product
       sensitiveHeaders:
     # 简洁写法
-#    product: /myProduct/**
+    order: /myOrder/**
   # 排除某些路由
   ignored-patterns:
     - /**/product/listForOrder
