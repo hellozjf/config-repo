@@ -4,3 +4,4 @@ eureka:
     prefer-ip-address: false
 logging:
   file: /log/order.log
+env: prod
