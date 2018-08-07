@@ -10,6 +10,8 @@ ribbon:
   ConnectTimeout: 60000
   ReadTimeout: 60000
 zuul:
+  # 全部服务忽略敏感头（全部服务都可传递cookie）
+  sensitive-headers:
   routes:
     # /myProduct/product/list -> /product/product/list
     myProduct:
@@ -27,3 +29,9 @@ management:
     web:
       exposure:
         include: "*"
+spring:
+  rabbitmq:
+    host: aliyun.hellozjf.com
+    port: 5672
+    username: hellozjf
+    password: Zjf@1234
