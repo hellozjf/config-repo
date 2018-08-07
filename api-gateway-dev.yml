@@ -35,3 +35,6 @@ spring:
     port: 5672
     username: hellozjf
     password: Zjf@1234
+  redis:
+    host: aliyun.hellozjf.com
+    port: 6379
