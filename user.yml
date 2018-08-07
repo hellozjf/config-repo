@@ -7,8 +7,6 @@ spring:
     username: root
     password: Zjf@1234
     driver-class-name: com.mysql.jdbc.Driver
-    hikari:
-      validation-timeout: 60000
   redis:
     host: aliyun.hellozjf.com
     port: 6379
