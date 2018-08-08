@@ -4,3 +4,7 @@ girl:
   age: 18
 logging:
   file: ../log/order.log
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: 192.168.255.6

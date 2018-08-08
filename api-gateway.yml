@@ -1,6 +1,3 @@
-eureka:
-  instance:
-    prefer-ip-address: true
 logging:
   level:
     com.imooc.apigateway: debug
