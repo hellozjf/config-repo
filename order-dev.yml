@@ -2,3 +2,5 @@ env: dev
 girl:
   name: lili
   age: 18
+logging:
+  file: ../log/order.log
