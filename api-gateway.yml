@@ -3,9 +3,6 @@ logging:
     com.imooc.apigateway: debug
 server:
   port: 8080
-ribbon:
-  ConnectTimeout: 60000
-  ReadTimeout: 60000
 zuul:
   # 全部服务忽略敏感头（全部服务都可传递cookie）
   sensitive-headers:
@@ -35,3 +32,10 @@ spring:
   redis:
     host: aliyun.hellozjf.com
     port: 6379
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
