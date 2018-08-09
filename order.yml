@@ -29,9 +29,13 @@ spring:
           destination: exchange2
         productInfoInput:
           destination: productInfo
-logging:
-  level:
-    com.imooc.order: debug
+  zipkin:
+    base-url: http://aliyun.hellozjf.com:9411/
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1
 server:
   port: 8100
 management:
@@ -42,3 +46,25 @@ management:
 ribbon:
   ReadTimeout: 60000
   ConnectTimeout: 60000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+    getProductInfoList:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+
+feign:
+  hystrix:
+    enabled: true
+
+logging:
+  level:
+    com.imooc.order: debug
+    org.springframework.cloud.openfeign: debug
