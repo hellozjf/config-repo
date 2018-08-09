@@ -16,9 +16,13 @@ spring:
           destination: productInfo
   jpa:
     show-sql: true
-logging:
-  level:
-    com.imooc.product: debug
+  zipkin:
+    base-url: http://aliyun.hellozjf.com:9411/
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1
 server:
   port: 8000
 management:
@@ -26,3 +30,8 @@ management:
     web:
       exposure:
         include: "*"
+logging:
+  level:
+    com.imooc.product: debug
+    com.zaxxer.hikari: info
+    org.springframework.cloud.openfeign: debug
